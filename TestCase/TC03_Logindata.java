@@ -1,6 +1,6 @@
 package TestCase;
 
-import org.junit.Assert;
+
 import org.testng.annotations.Test;
 
 import BaseTest.BaseClass;
@@ -39,11 +39,11 @@ public void verify_loginDDT(String username, String password, String res ) throw
 				if(targetpage==true)
 				{
 				my.clicklogout();
-				Assert.assertTrue(true);
+				org.testng.Assert.assertTrue(true);
 			}
 			else
 			{
-				Assert.assertTrue(false);
+				org.testng.Assert.assertTrue(false);
 			}
 			
 			if (res.equalsIgnoreCase("invalid"))
@@ -52,12 +52,12 @@ public void verify_loginDDT(String username, String password, String res ) throw
 				if(targetpage==true)
 				{
 				my.clicklogout();
-				Assert.assertTrue(false);
+				org.testng.Assert.assertTrue(false);
 				}
 			
 			else
 			{
-				Assert.assertTrue(true);
+				org.testng.Assert.assertTrue(true);
 			}
 		}
 	}

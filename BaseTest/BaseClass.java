@@ -36,22 +36,22 @@ public class BaseClass {
 		p.load(file);
 		
 		//Selenium grid code  
-		if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
-		{
-			DesiredCapabilities cap= new DesiredCapabilities();
-			cap.setPlatform(Platform.WIN10);
-			cap.setBrowserName("chrome");
-			driver = new RemoteWebDriver(new URL("http://192.168.56.1:4444/wd/hub"),cap);
+	//	if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
+		//{
+			//DesiredCapabilities cap= new DesiredCapabilities();
+			//cap.setPlatform(Platform.WIN10);
+			//cap.setBrowserName("chrome");
+		//	driver = new RemoteWebDriver(new URL("http://192.168.56.1:4444/wd/hub"),cap);
 					
 					//URL("http://192.168.56.1:4444/wb/hub"), cap);
 		
 		//logger=core.getLogger(this.getClass());
-				//driver=new ChromeDriver();
-					//  driver.manage().deleteAllCookies();
+				driver=new ChromeDriver();
+			  driver.manage().deleteAllCookies();
 				driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 				 driver.get(p.getProperty("url"));
-	  }
+	 // }
 	  }
 				  
 		
